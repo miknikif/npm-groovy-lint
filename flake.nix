@@ -39,10 +39,10 @@
         };
       };
       packages.default = packages.npm-groovy-lint;
-      apps.npm-groovy-lint = flake-utils.lib.mkApp {
-        drv = packages.npm-groovy-lint;
+      apps.npm-groovy-lint = {
         name = "npm-groovy-lint";
-        exePath = "/bin/npm-groovy-lint";
+        type = "app";
+        program = "${pkgs.lib.getBin self.packages.${system}.npm-groovy-lint}/bin/npm-groovy-lint";
       };
       apps.default = apps.npm-groovy-lint;
     });
