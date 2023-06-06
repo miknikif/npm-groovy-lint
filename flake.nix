@@ -42,6 +42,7 @@
       apps.npm-groovy-lint = flake-utils.lib.mkApp {
         drv = packages.npm-groovy-lint;
         name = "npm-groovy-lint";
+        exePath = "/bin/npm-groovy-lint";
       };
       apps.default = apps.npm-groovy-lint;
     });
