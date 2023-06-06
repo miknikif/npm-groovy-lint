@@ -26,7 +26,7 @@
           rev = version;
           sha256 = "sha256-JBfMLvo51RhtbVobtfv5/+qgo7UHTLZascU08D4l9Vk=";
         };
-        buildInputs = with pkgs; [jdk];
+        buildInputs = with pkgs; [jdk11];
         # The prepack script runs the build script, which we'd rather do in the build phase.
         npmPackFlags = ["--ignore-scripts"];
         npmDepsHash = "sha256-op6ddqPPD1eSCPdwbTOSDMhe6ABi647RlnHC0b0DlxY=";
